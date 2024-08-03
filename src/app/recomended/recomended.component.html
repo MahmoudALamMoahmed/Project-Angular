@@ -1,0 +1,42 @@
+<div class="d-flex gy-5 flex-wrap justify-content-center">
+    @for (bl7 of electronics; track bl7._id;) {
+
+    @if (bl7._id==1) {
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
+        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+        <hr>
+        <div class="p-3">
+        <h4>{{bl7.title}}</h4>
+        <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
+        </div>
+      </div>
+    }@else if(bl7._id==2){
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
+        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+        <hr>
+        <div class="p-3">
+        <h4>{{bl7.title}}</h4>
+        <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
+        </div>
+      </div>
+    }@else if(bl7._id==3){
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
+        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+        <hr>
+        <div class="p-3">
+        <h4>{{bl7.title}}</h4>
+        <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
+        </div>
+      </div>
+    }@else if(bl7._id==4){
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
+        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+        <hr>
+        <div class="p-3">
+        <h4>{{bl7.title}}</h4>
+        <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
+        </div>
+      </div>
+    }
+    }
+</div>
