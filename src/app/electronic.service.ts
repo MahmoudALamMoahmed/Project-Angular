@@ -1,11 +1,13 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Electronic } from './products/electronic';
+import { HttpClient } from '@angular/common/http';
+import { Observable, Observer } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ElectronicService {
- electronic :Electronic[]=
+ /* electronic :Electronic[]=
  [{
   "_id": 1,
   "title" : "Canon EOS Rebel T100",
@@ -78,5 +80,9 @@ export class ElectronicService {
         "image" : "https://i.ibb.co/qdfB3s6/2.webp",
         "brand" : "DJI"
         },
-    ]
+    ] */
+_httpClient=inject(HttpClient)
+    getProducts():Observable<any>{
+      return this._httpClient.get('https://fakestoreapiserver.reactbd.com/amazonproducts');
+    }
 }

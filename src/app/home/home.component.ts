@@ -12,8 +12,24 @@ import { ElectronicService } from '../electronic.service';
 })
 export class HomeComponent {
   electronics :Electronichome[] = []
-
+  products:any;
 constructor(_electronicService:ElectronicService){
-  this.electronics = _electronicService.electronic
+/*   this.electronics = _electronicService.electronic */
+_electronicService.getProducts().subscribe({
+
+  next:(res)=> {
+    console.log(res);
+    this.products=res;
+  },
+  error(err){
+    console.log(err);
+
+  },
+  complete(){
+    console.log("Complete");
+
+  }
+}
+)
 }
 }

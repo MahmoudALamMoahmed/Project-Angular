@@ -1,42 +1,43 @@
 <div class="d-flex gy-5 flex-wrap justify-content-center">
-    @for (bl7 of electronics; track bl7._id;) {
+    @for (bl7 of products; track bl7.id;) {
 
-    @if (bl7._id==1) {
-      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
-        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+    @if (bl7.id==1) {
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3 p-2 p-2">
+        <img [src]="bl7.image"   alt="" style="width: 250px;height: 200px; ">
         <hr>
-        <div class="p-3">
-        <h4>{{bl7.title}}</h4>
+        <div class="ps-3">
+          <p>our product is original</p>
         <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
         </div>
       </div>
-    }@else if(bl7._id==2){
-      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
-        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+    }@else if(bl7.id==13){
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3 p-2">
+        <img [src]="bl7.image"   alt="" style="width: 250px;height: 200px;">
         <hr>
-        <div class="p-3">
-        <h4>{{bl7.title}}</h4>
+        <div class="ps-3">
+        <p>our product is original</p>
         <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
         </div>
       </div>
-    }@else if(bl7._id==3){
-      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
-        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+    }@else if(bl7.id==3){
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3 p-2">
+        <img [src]="bl7.image"   alt="" style="width: 250px;height: 200px;">
         <hr>
-        <div class="p-3">
-        <h4>{{bl7.title}}</h4>
+        <div class="ps-3">
+        <p>our product is original</p>
         <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
         </div>
       </div>
-    }@else if(bl7._id==4){
-      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3">
-        <img [src]="bl7.image"   alt="" style="width: 280px;height: 200px;">
+    }@else if(bl7.id==4){
+      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3 p-2">
+        <img [src]="bl7.image"   alt="" style="width: 250px;height: 200px;">
         <hr>
-        <div class="p-3">
-        <h4>{{bl7.title}}</h4>
+        <div class="ps-3">
+        <p>our product is original</p>
         <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
         </div>
       </div>
     }
     }
+
 </div>

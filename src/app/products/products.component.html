@@ -110,7 +110,7 @@
 
 <div class="container my-5">
   <div class="d-flex gy-5 flex-wrap justify-content-center">
-    @for (bl7 of electronics; track bl7._id;) {
+    @for (bl7 of products; track bl7.id;) {
       <app-electroniccard [inp]="bl7"></app-electroniccard>
     }
    <!--  -->
