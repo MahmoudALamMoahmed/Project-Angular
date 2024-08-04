@@ -1,19 +1,23 @@
 <h1 class="mt-5">All Products</h1>
 <div class="container my-5">
-  <div class="d-flex gy-5 flex-wrap justify-content-center">
-    @for (bl7 of products; track bl7.id;) {
+  @if (products.length==0){
+    <app-loder></app-loder>
+  }@else{
+    <div class="d-flex gy-5 flex-wrap justify-content-center">
+      @for (bl7 of products; track bl7.id;) {
 
-      <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3 p-2">
-        <img [src]="bl7.image"   alt="" style="width: 250px;height: 200px;">
-        <hr>
-      <div class="ps-2">
-      <!-- <p style="font-size: xx-small;">{{bl7.title}}</p> -->
-      <p>our product is original</p>
-      <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
-      </div>
-      </div>
-    }
-  </div>
+        <div class="item border border-2 border-dark rounded-2 overflow-hidden m-3 p-2">
+          <img [src]="bl7.image"   alt="" style="width: 250px;height: 200px;">
+          <hr>
+        <div class="ps-2">
+        <!-- <p style="font-size: xx-small;">{{bl7.title}}</p> -->
+        <p>our product is original</p>
+        <p>Price : {{bl7.price}} <span class="text-success">$</span> </p>
+        </div>
+        </div>
+      }
+    </div>
+  }
 </div>
 
 <h2 class="my-5">Recomended Products</h2>
@@ -23,7 +27,7 @@
       <app-recomended></app-recomended>
     }
     @placeholder () {
-      <h3 class="text-info">Please Wait Dissappear Recomended products After a few seco.</h3>
+      <app-loder></app-loder>
     }
 
 </div>

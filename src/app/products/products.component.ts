@@ -11,15 +11,14 @@ import { ElectronicService } from '../electronic.service';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
-  electronics :Electronic[] = []
-  products:any;
-constructor(_electronicService:ElectronicService){
-/*   this.electronics = _electronicService.electronic */
-_electronicService.getProducts().subscribe({
 
-  next:(res)=> {
-    console.log(res);
-    this.products=res;
+ products:any;
+constructor(_electronicService:ElectronicService){
+  _electronicService.getProducts().subscribe({
+
+    next:(res)=> {
+      console.log(res);
+      this.products=res;
   },
   error(err){
     console.log(err);
@@ -32,3 +31,6 @@ _electronicService.getProducts().subscribe({
 })
 }
 }
+
+/*   this.electronics = _electronicService.electronic */
+ /*  products:Electronic[] = []; */
